@@ -20,3 +20,5 @@ IFurnitureFactory furnitureFactory = new WoodenFurnitureFactory();
 IFurniture chair3 = furnitureFactory.CreateChair();
 chair3.Create();
 Console.WriteLine($"Material: {chair3.GetMaterial()}");
+
+Console.ReadKey();
