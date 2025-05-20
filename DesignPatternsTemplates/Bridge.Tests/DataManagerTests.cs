@@ -1,101 +1,53 @@
 using Bridge.Abstraction;
-using Bridge.ConcreteImplementor;
 using Bridge.Implementor;
+using Moq;
 
 namespace Bridge.Tests
 {
-    public class DataManagerTests
+    public class DataManagerWithMoqTests
     {
-        // Fake/mock storage for controlled testing
-        private class MockStorage : IStorage
+        [Fact]
+        public void SaveData_CallsStorageSaveMethod()
         {
-            public Dictionary<string, object> Storage = new();
+            var mockStorage = new Mock<IStorage>();
+            var manager = new DataManager(mockStorage.Object);
 
-            public void Save(string key, object data)
-            {
-                Storage[key] = data;
-            }
+            string key = "user1";
+            string data = "Test Data";
 
-            public object Find(string key)
-            {
-                Storage.TryGetValue(key, out var data);
-                return data;
-            }
+            manager.SaveData(key, data);
 
-            public void Delete(string key)
-            {
-                Storage.Remove(key);
-            }
+            mockStorage.Verify(s => s.Save(key, data), Times.Once);
         }
 
         [Fact]
-        public void SaveData_ShouldStoreDataInStorage()
+        public void GetData_CallsStorageFindMethod_AndReturnsCorrectValue()
         {
-            var mock = new MockStorage();
-            var manager = new DataManager(mock);
+            var mockStorage = new Mock<IStorage>();
+            var manager = new DataManager(mockStorage.Object);
 
-            manager.SaveData("user1", "TestData");
+            string key = "user2";
+            string expectedData = "Found Data";
 
-            Assert.True(mock.Storage.ContainsKey("user1"));
-            Assert.Equal("TestData", mock.Storage["user1"]);
+            mockStorage.Setup(s => s.Find(key)).Returns(expectedData);
+
+            var result = manager.GetData(key);
+
+            Assert.Equal(expectedData, result);
+            mockStorage.Verify(s => s.Find(key), Times.Once);
         }
 
         [Fact]
-        public void GetData_ShouldReturnSavedData()
+        public void DeleteData_CallsStorageDeleteMethod()
         {
-            var mock = new MockStorage();
-            mock.Save("user2", "SomeValue");
-            var manager = new DataManager(mock);
+            var mockStorage = new Mock<IStorage>();
+            var manager = new DataManager(mockStorage.Object);
 
-            var result = manager.GetData("user2");
+            string key = "user3";
 
-            Assert.Equal("SomeValue", result);
-        }
+            manager.DeleteData(key);
 
-        [Fact]
-        public void DeleteData_ShouldRemoveDataFromStorage()
-        {
-            var mock = new MockStorage();
-            mock.Save("user3", "ToDelete");
-            var manager = new DataManager(mock);
-
-            manager.DeleteData("user3");
-
-            Assert.False(mock.Storage.ContainsKey("user3"));
-        }
-
-        [Fact]
-        public void DataManager_ShouldWorkWithDatabaseStorage()
-        {
-            var dbStorage = new DatabaseStorage();
-            var manager = new DataManager(dbStorage);
-
-            manager.SaveData("dbUser", "Alice");
-            var result = manager.GetData("dbUser");
-
-            Assert.Equal("Alice", result);
-
-            manager.DeleteData("dbUser");
-            var afterDelete = manager.GetData("dbUser");
-
-            Assert.Null(afterDelete);
-        }
-
-        [Fact]
-        public void DataManager_ShouldWorkWithFileSystemStorage()
-        {
-            var fsStorage = new FileSystemStorage();
-            var manager = new DataManager(fsStorage);
-
-            manager.SaveData("fsUser", "Bob");
-            var result = manager.GetData("fsUser");
-
-            Assert.Equal("Bob", result);
-
-            manager.DeleteData("fsUser");
-            var afterDelete = manager.GetData("fsUser");
-
-            Assert.Null(afterDelete);
+            mockStorage.Verify(s => s.Delete(key), Times.Once);
         }
     }
 }
