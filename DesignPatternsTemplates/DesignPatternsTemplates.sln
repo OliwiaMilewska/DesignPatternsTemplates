@@ -43,6 +43,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy.Tests", "Proxy.Tests\Proxy.Tests.csproj", "{30FF4B34-9DF6-4EFD-B646-265CF1D961E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{386B4864-6039-44D4-AC5B-89D682382C74}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -129,6 +131,10 @@ Global
 		{30FF4B34-9DF6-4EFD-B646-265CF1D961E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30FF4B34-9DF6-4EFD-B646-265CF1D961E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30FF4B34-9DF6-4EFD-B646-265CF1D961E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{386B4864-6039-44D4-AC5B-89D682382C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386B4864-6039-44D4-AC5B-89D682382C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386B4864-6039-44D4-AC5B-89D682382C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386B4864-6039-44D4-AC5B-89D682382C74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
