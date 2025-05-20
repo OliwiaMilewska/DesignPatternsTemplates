@@ -9,7 +9,6 @@ INotifier slackEmailNotifier = new SlackNotifier(emailNotifier);
 
 INotifier fullNotifier = new FacebookNotifier(slackEmailNotifier);
 
-
 Console.WriteLine("------ SMS + EMIL ------");
 emailNotifier.Send("Combined notification");
 
