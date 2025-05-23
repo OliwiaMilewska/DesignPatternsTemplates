@@ -55,6 +55,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer", "Observer\Observ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Observer.Tests", "Observer.Tests\Observer.Tests.csproj", "{270A057E-0D30-4831-B712-E73817B7A758}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command", "Command\Command.csproj", "{2CFE11A6-4A29-4804-A7FB-B838A91112F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Command.Tests", "Command.Tests\Command.Tests.csproj", "{AE5C57B8-A0EC-4167-9357-72C0EBADAB47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +169,14 @@ Global
 		{270A057E-0D30-4831-B712-E73817B7A758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{270A057E-0D30-4831-B712-E73817B7A758}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{270A057E-0D30-4831-B712-E73817B7A758}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CFE11A6-4A29-4804-A7FB-B838A91112F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CFE11A6-4A29-4804-A7FB-B838A91112F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CFE11A6-4A29-4804-A7FB-B838A91112F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CFE11A6-4A29-4804-A7FB-B838A91112F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE5C57B8-A0EC-4167-9357-72C0EBADAB47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE5C57B8-A0EC-4167-9357-72C0EBADAB47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE5C57B8-A0EC-4167-9357-72C0EBADAB47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE5C57B8-A0EC-4167-9357-72C0EBADAB47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
