@@ -31,21 +31,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade", "Facade\Facade.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Facade.Tests", "Facade.Tests\Facade.Tests.csproj", "{61082E06-975B-474A-A16B-4A32F2E272D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge", "Bridge\Bridge.csproj", "{E0C0CE63-3008-4E20-BC1C-25804E14D9E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge", "Bridge\Bridge.csproj", "{E0C0CE63-3008-4E20-BC1C-25804E14D9E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bridge.Tests", "Bridge.Tests\Bridge.Tests.csproj", "{47E884AE-85B6-4F32-9B7B-2D914B019E61}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bridge.Tests", "Bridge.Tests\Bridge.Tests.csproj", "{47E884AE-85B6-4F32-9B7B-2D914B019E61}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{676960D0-ADD5-43D9-BCE2-7789C0307C5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator", "Decorator\Decorator.csproj", "{676960D0-ADD5-43D9-BCE2-7789C0307C5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator.Tests", "Decorator.Tests\Decorator.Tests.csproj", "{D3CEEB68-937E-47D9-B7DA-809E370498BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Decorator.Tests", "Decorator.Tests\Decorator.Tests.csproj", "{D3CEEB68-937E-47D9-B7DA-809E370498BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy", "Proxy\Proxy.csproj", "{17E5AADF-A0D3-4B56-8997-1563AEBAE48B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proxy", "Proxy\Proxy.csproj", "{17E5AADF-A0D3-4B56-8997-1563AEBAE48B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Proxy.Tests", "Proxy.Tests\Proxy.Tests.csproj", "{30FF4B34-9DF6-4EFD-B646-265CF1D961E3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proxy.Tests", "Proxy.Tests\Proxy.Tests.csproj", "{30FF4B34-9DF6-4EFD-B646-265CF1D961E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight", "Flyweight\Flyweight.csproj", "{386B4864-6039-44D4-AC5B-89D682382C74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight", "Flyweight\Flyweight.csproj", "{386B4864-6039-44D4-AC5B-89D682382C74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flyweight.Tests", "Flyweight.Tests\Flyweight.Tests.csproj", "{935CE3E0-98F4-45E7-A154-855AC77B3DE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Flyweight.Tests", "Flyweight.Tests\Flyweight.Tests.csproj", "{935CE3E0-98F4-45E7-A154-855AC77B3DE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Composite", "Composite\Composite.csproj", "{99ECB203-3F1F-4D64-B5DA-F222B863923E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composite.Tests", "Composite.Tests\Composite.Tests.csproj", "{5468DF37-1A00-4DB2-8BAF-4CA2CCB72D42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +145,14 @@ Global
 		{935CE3E0-98F4-45E7-A154-855AC77B3DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{935CE3E0-98F4-45E7-A154-855AC77B3DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{935CE3E0-98F4-45E7-A154-855AC77B3DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99ECB203-3F1F-4D64-B5DA-F222B863923E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99ECB203-3F1F-4D64-B5DA-F222B863923E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99ECB203-3F1F-4D64-B5DA-F222B863923E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99ECB203-3F1F-4D64-B5DA-F222B863923E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5468DF37-1A00-4DB2-8BAF-4CA2CCB72D42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5468DF37-1A00-4DB2-8BAF-4CA2CCB72D42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5468DF37-1A00-4DB2-8BAF-4CA2CCB72D42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5468DF37-1A00-4DB2-8BAF-4CA2CCB72D42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
